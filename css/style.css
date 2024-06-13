@@ -237,12 +237,16 @@ h1 {
     width: 300px;
   }
 
+  .overlay img {
+    max-height: 75%;
+  }
+
   .overlay .kanan {
-    right: 20%;
+    right: 10%;
   }
 
   .overlay .kiri {
-    left: 20%;
+    left: 10%;
   }
 
   body h1 {
