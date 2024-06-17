@@ -10,6 +10,14 @@ body {
   background-color: #ddd;
 }
 
+body .moon,
+body .sun {
+  font-size: 25px;
+  margin-left: 50%;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
 h1 {
   font-size: 80px;
   margin: 50px 0;
@@ -17,15 +25,24 @@ h1 {
   text-shadow: 1px 1px 1px white;
 }
 
+.darkmode {
+  background-color: #121212;
+  color: white;
+}
+
 .hidden {
-  display: none;
+  display: none !important;
 }
 .container {
   width: 600px;
   margin: auto;
-  border: 1px solid black;
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 10px;
   padding: 30px;
+}
+
+.lightcontainer {
+  border: 1px solid black;
 }
 
 .gallery li,
@@ -42,6 +59,10 @@ h1 {
   height: 120px;
   float: left;
   border: 5px solid black;
+}
+
+.darkborderli {
+  border: 5px solid rgb(85, 84, 84) !important;
 }
 
 .gallery li a img {
@@ -100,7 +121,7 @@ h1 {
   transition: 0.5s;
 }
 .overlay:target img {
-  animation: zoomin 0.8s;
+  animation: fade 1s;
 }
 
 .overlay .desc {
@@ -126,6 +147,10 @@ h1 {
   color: white;
   opacity: 0;
 }
+
+.overlay .kanan:hover {
+  font-weight: bold;
+}
 .overlay:target .kanan {
   animation: slideLeft 0.5s 0.5s forwards;
 }
@@ -139,6 +164,10 @@ h1 {
   left: 30%;
   color: white;
   opacity: 0;
+}
+
+.overlay .kiri:hover {
+  font-weight: bold;
 }
 
 .overlay:target .kiri {
@@ -230,6 +259,15 @@ h1 {
   }
 }
 
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* media query */
 
 @media (max-width: 768px) {
@@ -247,6 +285,10 @@ h1 {
 
   .overlay .kiri {
     left: 10%;
+  }
+
+  .overlay .close {
+    margin-left: -15px;
   }
 
   body h1 {
