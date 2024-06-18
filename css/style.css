@@ -16,6 +16,15 @@ body .sun {
   margin-left: 50%;
   margin-bottom: 20px;
   display: inline-block;
+  cursor: pointer;
+}
+
+body .moon:hover {
+  font-weight: 600;
+}
+
+body .sun:hover {
+  font-weight: 600;
 }
 
 h1 {
@@ -293,5 +302,10 @@ h1 {
 
   body h1 {
     margin: 50px auto;
+  }
+
+  body .moon,
+  body .sun {
+    margin-left: 48%;
   }
 }
